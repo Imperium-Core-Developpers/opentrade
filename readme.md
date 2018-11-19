@@ -1,26 +1,18 @@
-# OpenTrade is the best opensource cryptocurrency exchange!
+# OpenTrade opensource cryptocurrency exchange fork to go beyond....
 
 Live version: https://trade.multicoins.org/
 
+Install :
 
-Step-by-step install instructions:
-
-1. Register on the VPS hosting like this https://m.do.co/c/1ece5d76d5cd
-2. Create "Droplet" Ubuntu 16 x64 / 1GB / 1vCPU / 25 GB SSD
-3. Log in to Droplet over SSH (You will receive a email with IP, username and password)
-4
-
-```
 sudo apt-get update
 sudo apt-get install build-essential libssl-dev curl -y
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 bash install_nvm.sh
-sudo reboot
+sudo reboot  ( or just close and re-open terminal ??.... )
 
 nvm install 8.0.0
 
-git clone https://github.com/3s3s/opentrade.git
-cd opentrade
+git clone https://github.com/Imperium-Core-Developpers/opentrade.git
 
 sudo npm install 
 ```
@@ -41,22 +33,22 @@ exports.walletspassphrase = {
 };
 ```
 
-**After, you can run exchange**
+**After editing the configuration files , you can run the exchange**
 
 ```
 cd  ~/opentrade/server
 sudo node main.js
 ```
 
-In your browser address bar, type https://127.0.0.1:40443
-You will see OpenTrade.
+In your browser address bar, type https://127.0.0.1:40443 ( or simply https://localhost if you put port 443 )
+You will see the OpenTrade platform.
 
-The first registered user will be exchange administrator. 
+The first registered user will be the exchange administrator. 
 
-# Add trade pairs
+# How to add new trade pairs
 
-For each coin you should create *.conf file
-This is common example for "some_coin.conf"
+For each coin, you should create a *.conf file
+Here is a common example for "some_coin.conf"
 
 ```
 rpcuser=long_random_string_one
@@ -83,21 +75,21 @@ Also, you must encrypt your cryptocurrency wallet with this command.
 
 ```
 
-*If coin is not supported by encryption (like ZerroCash and it forks) the coin can not be added to OpenTrade.*
+*If the coin is not supported by encryption (like ZerroCash and it forks) then the coin can not be added to OpenTrade.*
 
 
-Add you coin details to OpenTrade
+Add your coin details to OpenTrade
 
-1. Register on exchange. The first registered user will be exchange administrator.
+1. Register on the exchange. The first registered user will be the exchange administrator.
 2. Go to "Admin Area" -> "Coins" -> "Add coin"
-3. Fill up all fields and click "Confirm"
-4. Fill "Minimal confirmations count" and "Minimal balance" and uncheck and check "Coin visible" button
-5. Click "Save"
-6. Check RPC command for the coin. If it worked then coin was added to the exchange!
+3. Fill up all required fields and click on "Confirm"
+4. Fill "Minimal confirmations count" and "Minimal balance" and uncheck then re-check the "Coin visible" button
+5. Click on "Save"
+6. Check the RPC command for the coin. If it is working then the coin has been added to the exchange!
 
-All visible coins should be appear in the Wallet. You should create default coin pairs now.
+All visible coins should appear in the Wallet. You should now create default coin pairs.
 
-File ~/opentrade/server/constants.js have settings that you can change
+The file ~/opentrade/server/constants.js have some settings you can change
 
 https://github.com/3s3s/opentrade/blob/master/server/constants.js
 
@@ -126,17 +118,22 @@ const DEFAULT_PAIR = 'Litecoin'; //change Litecoin to your default coin pair sam
 const TRADE_COMISSION = 0.001;
 ```
 
-After that, you coins should appear on the main page.
+After those modifications, your coins should now appear on the main page.
 
 
 
 **Donate**
-If you find this script is useful then consider donate please
+buy us some coffee !!   :-)
+
+3s3s :
 
 Bitcoin 36WA1WESULub6Q434bQcnmpnk62oLD7vuQ
 Marycoin M9dKNcBYgrbbE2f4tz3ud32KLKj1i9FrmN
 Dogecoin DCJRhs9Pjr2FBrrUbKvFeWcYC6ZaF2GTAx
 Litecoin LTbDdTijroJEyXt27apQSnuMY4RoXyjdq2
+
+IMPERIUM-main-dev :
+Bitcoin 3HPUbratYNpP2Q2wWh65LmwjSmy441KSDU
 
 
 
